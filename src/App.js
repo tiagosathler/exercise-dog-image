@@ -36,7 +36,7 @@ class App extends React.Component {
   renderImage() {
     const { url } = this.state;
     return (
-      <img src={ url } alt="Cão" />
+      <img src={ url } alt="dog picture" width="50%" />
     );
   }
 
@@ -45,6 +45,8 @@ class App extends React.Component {
     const loadingElement = <p>Loading...</p>;
     return(
     <div className="App">
+      <button onClick={ this.fecthDog }>Buscar outro cão</button>
+      <br />
       { loading ? loadingElement : this.renderImage() }
     </div>
     );
